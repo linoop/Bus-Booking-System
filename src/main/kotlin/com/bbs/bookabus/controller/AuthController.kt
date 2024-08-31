@@ -32,14 +32,6 @@ class AuthController(
      */
     @PostMapping("/authentication")
     fun login(@RequestBody authRequest: AuthRequest): ResponseEntity<AuthResponse> {
-//        try {
-//            authenticationManager.authenticate(
-//                UsernamePasswordAuthenticationToken(authRequest.username, authRequest.password)
-//            )
-//        } catch (ex: AuthenticationException) {
-//            throw ResponseStatusException(HttpStatus.UNAUTHORIZED)
-//        }
-
         val user = userService.getUser(authRequest.username)
         val token = jwtUtils.generateToken(user)
         return ResponseEntity.status(HttpStatus.OK).body(AuthResponse(token))
