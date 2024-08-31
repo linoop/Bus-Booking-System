@@ -33,7 +33,7 @@ This is a simple bus booking system developed using Kotlin and Spring Boot. The 
 
 1. **Clone the Repository**
    ```bash
-   git clone [https://github.com/your-repo/bus-booking-system.git](https://github.com/linoop/Bus-Booking-System.git)
+   git clone https://github.com/linoop/Bus-Booking-System.git
    cd bus-booking-system
    ```
 
